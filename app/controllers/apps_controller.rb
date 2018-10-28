@@ -5,6 +5,7 @@ class AppsController < ApplicationController
   # GET /apps.json
   def index
     @apps = App.all
+    
   end
 
   # GET /apps/1
