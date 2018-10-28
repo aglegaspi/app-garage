@@ -7,4 +7,13 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
+import ReactOnRails from 'react-on-rails';
+import Search from '../components/Search';
+
+ReactOnRails.register({
+  Search
+});
+
+/*
+The application.js file now serves as a way for us to register our components with react-on-rails. In our case, it’s acceptable to include our search component on every page load, but for real-life production applications, it’s not very performant to include every component on every page. In real-life applications, components would be split into webpack bundles which are loaded on pages where they are needed.
+*/
